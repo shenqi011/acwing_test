@@ -5,18 +5,18 @@
 int n,m;
 const int N = 110;
 int g[N][N],d[N][N];
-typedef pair<int,int> PII;
+typedef pair<int,int> PII; // 重命名
 
 void bfs(int x, int y)
 {
     queue<PII> q;
-    q.push({x,y});
+    q.push({x,y}); // bfs用队列来做，队列是队尾进，队头出，所以是按照一层一层来遍历的
 
     while(!q.empty())
     {
         int start = q.front();
-        q.pop();
-        int tx = {-1,0,1,0}, ty = {0,-1,0,1};
+        q.pop(); // 第一个点pop出
+        int tx = {-1,0,1,0}, ty = {0,-1,0,1}; // 用向量法来遍历四个方向
         for(int i = 0; i < 4; i++ )
         {
 
